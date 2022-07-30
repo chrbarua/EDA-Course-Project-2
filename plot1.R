@@ -1,4 +1,4 @@
-plot_1 <- aggregate(Emissions ~ Year, dfc, sum)
+plot_1 <- aggregate(Emissions ~ year, dfc, sum)
 
 plot(plot_1$Year,plot_1$Emissions, main="Total US PM2.5 Emissions", "b", xlab="Year", ylab="Emissions (thousands of tons)",xaxt="n")
 axis(side=1, at=c("1999", "2002", "2005", "2008"))
