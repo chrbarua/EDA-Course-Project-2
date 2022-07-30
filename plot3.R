@@ -4,8 +4,7 @@ plot_3 <- subset(dfc, fips == "24510", c("Emissions", "year","type"))
 plot_3 <- melt(plot_3, id=c("year", "type"), measure.vars=c("Emissions"))
 plot_3 <- dcast(plot_3, year + type ~ variable, sum)
 
-ggplot(data=plot_3, aes(x=year, y=Emissions, group=type, color=type)) + geom_line() + geom_point( size=4, shape=21, fill="white") 
-+ xlab("Year") + ylab("Emissions (tons)") + ggtitle("Baltimore PM2.5 Emissions by Type and Year")
+ggplot(data=plot_3, aes(x=year, y=Emissions, group=type, color=type)) + geom_line() + geom_point( size=4, shape=21, fill="white") + xlab("Year") + ylab("Emissions (tons)") + ggtitle("Baltimore PM2.5 Emissions by Type and Year")
 
 dev.off()
 
